@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/iconfont/iconfont.css">
+</head>
+<body>
+<div class="main">
+    <div class="login-logo"><a href="#"><img src="../images/logo.png" height="100%"></a></div>
+    <div class="login-content">
+        <div class="item">
+            <i class="iconfont icon-zhanghu"></i>
+            <div class="p-input"><input type="text" placeholder="用户名/手机/邮箱"></div>
+        </div>
+        <div class="item">
+            <i class="iconfont icon-mima"></i>
+            <div class="p-input"><input type="password" placeholder="请输入密码"></div>
+        </div>
+        <div class="selected"><label><input type="checkbox" checked> <span>两周内免登录</span></label></div>
+        <button type="button" class="login-button click-show">登 录</button>
+        <div class="pass-text">
+            <div class="pass-text-fl"><a href="#">忘记密码？</a></div>
+            <div class="pass-text-fr"><a href="#">免费注册</a></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../scripts/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../scripts/fastclick.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".login-content").find("input").val("");
+        $(".login-content").find("input").keyup(function(){
+            if($(".login-content").find("input").eq(0).val()!=""){
+                $(".login-button").addClass("click-show").addClass("addbg");
+            }else{
+                $(".login-button").removeClass("click-show").removeClass("addbg");
+            }
+        });
+    });
+</script>
+</body>
+</html>
